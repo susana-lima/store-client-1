@@ -11,10 +11,12 @@ import {
   MatTabsModule, MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
