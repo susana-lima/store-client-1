@@ -2,6 +2,8 @@ import {Item} from './item';
 
 export const ITEMS: Item[] = [
   {
+    id: 0,
+    featured: true,
     name: 'Tractor Kubota 10.5 Hp',
     image: '/assets/images/tractorkubota.jpg',
     category: 'machinery',
@@ -43,6 +45,8 @@ export const ITEMS: Item[] = [
     ]
   },
   {
+    id: 1,
+    featured: false,
     name: 'Tractor kubota con pala 20Hp',
     image: '/assets/images/tractorkubota-pala.jpg',
     category: 'machinery',
@@ -86,6 +90,8 @@ export const ITEMS: Item[] = [
 
   },
   {
+    id: 2,
+    featured: false,
     name: 'Motocultor yanmar 250',
     image: '/assets/images/motocultor.jpg',
     category: 'machinery',
@@ -128,6 +134,8 @@ export const ITEMS: Item[] = [
     ]
   },
   {
+    id: 3,
+    featured: false,
     name: 'Montacarga',
     image: '/assets/images/montacarga.jpg',
     category: 'machinery',
