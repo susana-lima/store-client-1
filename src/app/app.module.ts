@@ -66,9 +66,11 @@ import {LoginComponent} from './login/login.component';
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
     FlexLayoutModule, AppRoutingModule
-
   ],
   providers: [],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
