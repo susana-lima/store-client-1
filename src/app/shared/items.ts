@@ -54,30 +54,30 @@ export const ITEMS: Item[] = [
     comments: [
       {
         rating: 5,
-        comment: 'Imagina todo lo qu puedes hacer con este tractor y su arado!',
-        author: 'Leo Messi',
+        comment: 'Imagina todo lo que puedes hacer con este poderoso tractor y su pala frontal!',
+        author: 'Gabriel Perez',
         date: '2012-10-16T17:57:28.556094Z'
       },
       {
         rating: 4,
-        comment: 'Me dio mucho confort, desearia que mi suegro lo compre!',
-        author: 'Tania Barrancos',
+        comment: 'Me facilito el trabajo, desearia que mi hermano lo compre!',
+        author: 'Javier Hidalgo',
         date: '2014-09-05T17:57:28.556094Z'
       },
       {
         rating: 3,
-        comment: 'UUsalo, solamente usalo y veras que no hay comparacion con otros!',
-        author: 'Mario Rodriguez',
+        comment: 'Maravilloso, multifuncion usalo y veras que no hay trabajo que no se pueda realizar!',
+        author: 'Tito Rodriguez',
         date: '2015-02-13T17:57:28.556094Z'
       },
       {
         rating: 4,
-        comment: 'Lo ultimo, modelo de lujo!',
-        author: 'Damian Cardozo',
+        comment: 'Fenomenal, modelo unico!',
+        author: 'Bruno Fernandez',
         date: '2013-12-02T17:57:28.556094Z'
       },
       {
-        rating: 2,
+        rating: 5,
         comment: 'Simplemente es muy lindo!',
         author: 'Gustavo Lopez',
         date: '2011-12-02T17:57:28.556094Z'
@@ -97,32 +97,32 @@ export const ITEMS: Item[] = [
     comments: [
       {
         rating: 5,
-        comment: 'Imagina todo lo qu puedes hacer con este tractor y su arado!',
-        author: 'Leo Messi',
+        comment: 'Imagina todos los lugares estrechos que puedes acceder con este motocultor!',
+        author: 'Miguel Acuña',
         date: '2012-10-16T17:57:28.556094Z'
       },
       {
-        rating: 4,
-        comment: 'Me dio mucho confort, desearia que mi suegro lo compre!',
-        author: 'Tania Barrancos',
+        rating: 5,
+        comment: 'Me asombro su facil acceso a lugares sin caminos, desearia adicionarle una carreta!',
+        author: 'Franco Duran',
         date: '2014-09-05T17:57:28.556094Z'
       },
       {
-        rating: 3,
-        comment: 'UUsalo, solamente usalo y veras que no hay comparacion con otros!',
-        author: 'Mario Rodriguez',
+        rating: 4,
+        comment: 'Muy economico, veras lo economico que resulta y lo maravilloso que funciona!',
+        author: 'Edwin Apaza',
         date: '2015-02-13T17:57:28.556094Z'
       },
       {
         rating: 4,
-        comment: 'Lo ultimo, modelo de lujo!',
+        comment: 'Bonito, liviano y facil de maniobrar!',
         author: 'Damian Cardozo',
         date: '2013-12-02T17:57:28.556094Z'
       },
       {
         rating: 2,
-        comment: 'Simplemente es muy lindo!',
-        author: 'Gustavo Lopez',
+        comment: 'Demora en terrenos muy extensos!',
+        author: 'Ramon Lopez',
         date: '2011-12-02T17:57:28.556094Z'
       }
     ]
@@ -138,20 +138,20 @@ export const ITEMS: Item[] = [
     comments: [
       {
         rating: 5,
-        comment: 'Imagina todo lo qu puedes hacer con este tractor y su arado!',
-        author: 'Leo Messi',
+        comment: 'Imagina todo lo que puedes mover con este montacarga!',
+        author: 'Fredy Tamayo',
         date: '2012-10-16T17:57:28.556094Z'
       },
       {
         rating: 4,
-        comment: 'Me dio mucho confort, desearia que mi suegro lo compre!',
-        author: 'Tania Barrancos',
+        comment: 'Levanta cosas super pesadas, la potencia es real!',
+        author: 'Hugo Muñoz',
         date: '2014-09-05T17:57:28.556094Z'
       },
       {
         rating: 3,
-        comment: 'UUsalo, solamente usalo y veras que no hay comparacion con otros!',
-        author: 'Mario Rodriguez',
+        comment: 'Si manipulas cosas pequeñas puede no ser lo apropiado!',
+        author: 'Rene Jaldin',
         date: '2015-02-13T17:57:28.556094Z'
       },
       {
@@ -161,8 +161,8 @@ export const ITEMS: Item[] = [
         date: '2013-12-02T17:57:28.556094Z'
       },
       {
-        rating: 2,
-        comment: 'Simplemente es muy lindo!',
+        rating: 5,
+        comment: 'No te arrepentiras, veras todo el tiempo que te ahorra!',
         author: 'Gustavo Lopez',
         date: '2011-12-02T17:57:28.556094Z'
       }
