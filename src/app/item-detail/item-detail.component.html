@@ -27,6 +27,13 @@
   </div>
 
   <div fxFlex="40">
-    Display item comments here
+    <h1>Comments</h1>
+    <mat-list>
+      <mat-list-item *ngFor="let comment of item.comments">
+        <p matLine>{{comment.comment}}</p>
+        <p matLine>{{comment.rating}} Stars</p>
+        <p matLine>-- {{comment.author}} {{comment.date | date}}</p>
+      </mat-list-item>
+    </mat-list>
   </div>
 </div>
