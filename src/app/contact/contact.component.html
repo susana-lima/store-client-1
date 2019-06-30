@@ -36,4 +36,46 @@
       </div>
     </div>
   </div>
+
+  <div fxFlex fxFlexOffset="20px" class="form-size">
+    <h3>Envianos tu mensaje</h3>
+    <p>{{ messageForm.value | json }} {{ messageForm.status | json }}</p>
+    <form novalidate [formGroup]="messageForm" (ngSubmit)="onSubmit()" id="form">
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput formControlName="firstname" placeholder="Nombre" type="text" required>
+        </mat-form-field>
+        <mat-form-field class="half-width">
+          <input matInput formControlName="lastname" placeholder="Apellido" type="text" required>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="half-width">
+          <input matInput formControlName="telnum" placeholder="Telefono" type="tel" required>
+        </mat-form-field>
+        <mat-form-field class="half-width">
+          <input matInput formControlName="email" placeholder="Email" type="email" required>
+        </mat-form-field>
+      </p>
+      <table class="form-size">
+        <td class="half-width">
+          <mat-slide-toggle formControlName="agree">Podemos contactarte?</mat-slide-toggle>
+        </td>
+        <td class="half-width">
+          <mat-select formControlName="contacttype" placeholder="How?">
+            <mat-option *ngFor="let ctype of contactType" [value]="ctype">
+              {{ctype}}
+            </mat-option>
+          </mat-select>
+        </td>
+      </table>
+      <p>
+        <mat-form-field class="full-width">
+          <textarea matInput formControlName="text" placeholder="Tu mensaje" rows=12></textarea>
+        </mat-form-field>
+      </p>
+      <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
+    </form>
+  </div>
+
 </div>
