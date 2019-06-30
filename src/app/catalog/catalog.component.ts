@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Item} from '../shared/item';
 import {ItemService} from '../services/item.service';
 
@@ -11,10 +11,14 @@ export class CatalogComponent implements OnInit {
 
   items: Item[];
 
-  constructor(private itemService: ItemService) {
+  constructor(private itemService: ItemService,
+              @Inject('BaseURL') private BaseURL) {
   }
 
-  ngOnInit() {
-    this.itemService.getItems().subscribe(items => this.items = items);
+  ngOnInit(): void {
+    this.itemService.getItems().subscribe(items => {
+      this.items = items;
+      console.log(items);
+    });
   }
 }
