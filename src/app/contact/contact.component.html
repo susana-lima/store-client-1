@@ -42,19 +42,41 @@
     <p>{{ messageForm.value | json }} {{ messageForm.status | json }}</p>
     <form novalidate [formGroup]="messageForm" (ngSubmit)="onSubmit()" id="form">
       <p>
-        <mat-form-field class="half-width">
+        <mat-form-field class="half-width"
+                        color="{{(messageForm.get('firstname').hasError('required') && messageForm.get('firstname').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="firstname" placeholder="Nombre" type="text" required>
+          <mat-hint>
+                <span
+                  [hidden]="!(messageForm.get('firstname').hasError('required') && messageForm.get('firstname').touched)">
+                  Nombre es requerido</span>
+          </mat-hint>
         </mat-form-field>
-        <mat-form-field class="half-width">
+        <mat-form-field class="half-width"
+                        color="{{(messageForm.get('lastname').hasError('required') && messageForm.get('lastname').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="lastname" placeholder="Apellido" type="text" required>
+          <mat-hint>
+                <span
+                  [hidden]="!(messageForm.get('lastname').hasError('required') && messageForm.get('lastname').touched)">
+                  Apellido es requerido</span>
+          </mat-hint>
         </mat-form-field>
       </p>
       <p>
-        <mat-form-field class="half-width">
+        <mat-form-field class="half-width"
+                        color="{{(messageForm.get('telnum').hasError('required') && messageForm.get('telnum').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="telnum" placeholder="Telefono" type="tel" required>
+          <mat-hint>
+                <span [hidden]="!(messageForm.get('telnum').hasError('required') && messageForm.get('telnum').touched)">
+                  Telefono es requerido</span>
+          </mat-hint>
         </mat-form-field>
-        <mat-form-field class="half-width">
+        <mat-form-field class="half-width"
+                        color="{{(messageForm.get('email').hasError('required') && messageForm.get('email').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="email" placeholder="Email" type="email" required>
+          <mat-hint>
+                <span [hidden]="!(messageForm.get('email').hasError('required') && messageForm.get('email').touched)">
+                  Email es requerido</span>
+          </mat-hint>
         </mat-form-field>
       </p>
       <table class="form-size">
@@ -74,7 +96,9 @@
           <textarea matInput formControlName="text" placeholder="Tu mensaje" rows=12></textarea>
         </mat-form-field>
       </p>
-      <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
+      <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="messageForm.invalid">
+        Enviar
+      </button>
     </form>
   </div>
 

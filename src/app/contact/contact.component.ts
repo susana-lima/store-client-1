@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ContactType, Message} from '../shared/message';
 
 @Component({
@@ -22,10 +22,10 @@ export class ContactComponent implements OnInit {
 
   createForm() {
     this.messageForm = this.fb.group({
-      firstname: '',
-      lastname: '',
-      telnum: 0,
-      email: '',
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      telnum: ['', Validators.required],
+      email: ['', Validators.required],
       agree: false,
       contacttype: 'Chat',
       text: ''
@@ -35,7 +35,18 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     this.message = this.messageForm.value;
     console.log(this.message);
-    this.messageForm.reset();
+    this.messageForm.reset({
+      firstname: '',
+      lastname: '',
+      telnum: '',
+      email: '',
+      agree: false,
+      contacttype: 'None',
+      message: ''
+    });
+    // work around
+    const form: HTMLFormElement = document.getElementById('form') as HTMLFormElement;
+    form.reset();
   }
 
 }
