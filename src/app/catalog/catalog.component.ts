@@ -10,10 +10,11 @@ import {ItemService} from '../services/item.service';
 export class CatalogComponent implements OnInit {
 
   items: Item[];
+
   constructor(private itemService: ItemService) {
   }
 
   ngOnInit() {
-    this.items = this.itemService.getItems();
+    this.itemService.getItems().then(items => this.items = items);
   }
 }
