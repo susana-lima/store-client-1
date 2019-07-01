@@ -17,19 +17,20 @@ export class ItemService {
 
   getItems(): Observable<Item[]> {
     // return Observable.of(ITEMS).delay(2000);
-    return this.http.get(baseURL + 'items') as Observable<Item[]>;
+    return this.http.get(baseURL + 'iteminstances') as Observable<Item[]>;
   }
 
   getItem(id: number): Observable<Item> {
-    return this.http.get(baseURL + 'items/' + id) as Observable<Item>;
+    return this.http.get(baseURL + 'iteminstances/' + id) as Observable<Item>;
   }
 
   getFeaturedItem(): Observable<Item> {
-    return this.http.get(baseURL + 'items?featured=true') as Observable<Item>;
+    return this.http.get(baseURL + 'iteminstances?featured=true').pipe(
+      map(items => (items as Item[]).find(item => item.featured === true))) as Observable<Item>;
   }
 
   getItemIds(): Observable<number[]> {
-    return this.http.get(baseURL + 'items').pipe(map(items => (<Item[]> items).map(item => item.id))) as Observable<number[]>;
+    return this.http.get(baseURL + 'iteminstances').pipe(map(items => (items as Item[]).map(item => item.id))) as Observable<number[]>;
   }
 
 }

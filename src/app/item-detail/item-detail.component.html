@@ -13,7 +13,7 @@
             <h3>{{item.name | uppercase}}</h3>
           </mat-card-title>
         </mat-card-title-group>
-        <img matCardImage src={{item.image}} alt={{item.name}}>
+        <img matCardImage data-src="data:image/png;base64,{{item.image}}" alt={{item.name}}>
         <mat-card-content>
           <p>{{item.description}}
           </p>
