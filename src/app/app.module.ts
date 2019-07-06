@@ -1,7 +1,12 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, ApplicationRef} from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import {AppComponent} from './app.component';
+
+import { AppComponent } from './app.component';
+
+import { AgmCoreModule } from '@agm/core';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatAutocompleteModule,
@@ -68,7 +73,9 @@ import {HttpClientModule} from '@angular/common/http';
     MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule,
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
-    FlexLayoutModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
+    FlexLayoutModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, CommonModule, AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDe8GDwCIVmhYhvCHYpTy5AumBxN8DqeTw'
+    })
   ],
   providers: [
     {provide: 'BaseURL', useValue: baseURL}

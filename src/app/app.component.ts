@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'store-client';
+  title: string = 'store-client';
+  lat: number = -66.0783853;
+  lng: number = -17.3907855;
 }
