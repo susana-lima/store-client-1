@@ -1,11 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, ApplicationRef} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
-import { AgmCoreModule } from '@agm/core';
+import {AgmCoreModule} from '@agm/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -74,7 +74,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
     FlexLayoutModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, CommonModule, AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDe8GDwCIVmhYhvCHYpTy5AumBxN8DqeTw'
+      apiKey: 'AIzaSyA1N25HaVlOa-jyTcCtGrahmakIryw44jk'
     })
   ],
   providers: [
