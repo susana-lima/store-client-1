@@ -74,7 +74,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatTableModule,
     MatTabsModule, MatToolbarModule, MatTooltipModule,
     FlexLayoutModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, CommonModule, AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA1N25HaVlOa-jyTcCtGrahmakIryw44jk'
+      apiKey: 'AIzaSyBr1_u2FmcBaFvm73vP_XXLF6NUWKCcJSQ'
     })
   ],
   providers: [
@@ -83,7 +83,8 @@ import {HttpClientModule} from '@angular/common/http';
   entryComponents: [
     LoginComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule {
 }

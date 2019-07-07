@@ -32,10 +32,22 @@
         </div>
       </div>
       <div fxFlex="40">
-        <h4>Mapa de nustra Ubicación</h4>
-        <agm-map [latitude]="lat" [longitude]="lng">
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map>
+        <h4>Mapa de nuestra Ubicación</h4>
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+
+        <!-- <agm-map [latitude]="lat" [longitude]="lng">
+           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+         </agm-map>-->
+        <div id="map" class="map">
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-66.12606525421144%2C-17.379550565987266%2C-66.12195611000062%2C-17.376632418470265&amp;layer=mapnik&amp;marker=-17.378091498043002%2C-66.12401068210602"
+                  style="border: 1px solid black"></iframe>
+          <br/>
+          <small><a
+            href="https://www.openstreetmap.org/?mlat=-17.37809&amp;mlon=-66.12401#map=18/-17.37809/-66.12401&amp;layers=N">Ver
+            mapa más grande</a></small>
+        </div>
       </div>
     </div>
   </div>
@@ -49,18 +61,18 @@
                         color="{{(messageForm.get('firstname').hasError('required') && messageForm.get('firstname').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="firstname" placeholder="Nombre" type="text" required>
           <mat-hint>
-                <span
-                  [hidden]="!(messageForm.get('firstname').hasError('required') && messageForm.get('firstname').touched)">
-                  Nombre es requerido</span>
+                 <span
+                   [hidden]="!(messageForm.get('firstname').hasError('required') && messageForm.get('firstname').touched)">
+                   Nombre es requerido</span>
           </mat-hint>
         </mat-form-field>
         <mat-form-field class="half-width"
                         color="{{(messageForm.get('lastname').hasError('required') && messageForm.get('lastname').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="lastname" placeholder="Apellido" type="text" required>
           <mat-hint>
-                <span
-                  [hidden]="!(messageForm.get('lastname').hasError('required') && messageForm.get('lastname').touched)">
-                  Apellido es requerido</span>
+                 <span
+                   [hidden]="!(messageForm.get('lastname').hasError('required') && messageForm.get('lastname').touched)">
+                   Apellido es requerido</span>
           </mat-hint>
         </mat-form-field>
       </p>
@@ -69,16 +81,17 @@
                         color="{{(messageForm.get('telnum').hasError('required') && messageForm.get('telnum').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="telnum" placeholder="Telefono" type="tel" required>
           <mat-hint>
-                <span [hidden]="!(messageForm.get('telnum').hasError('required') && messageForm.get('telnum').touched)">
-                  Telefono es requerido</span>
+                 <span
+                   [hidden]="!(messageForm.get('telnum').hasError('required') && messageForm.get('telnum').touched)">
+                   Telefono es requerido</span>
           </mat-hint>
         </mat-form-field>
         <mat-form-field class="half-width"
                         color="{{(messageForm.get('email').hasError('required') && messageForm.get('email').touched) ? 'warn' : 'primary'}}">
           <input matInput formControlName="email" placeholder="Email" type="email" required>
           <mat-hint>
-                <span [hidden]="!(messageForm.get('email').hasError('required') && messageForm.get('email').touched)">
-                  Email es requerido</span>
+                 <span [hidden]="!(messageForm.get('email').hasError('required') && messageForm.get('email').touched)">
+                   Email es requerido</span>
           </mat-hint>
         </mat-form-field>
       </p>

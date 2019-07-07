@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'store-client';
-  lat: number = -66.0783853;
-  lng: number = -17.3907855;
+  title = 'store-client';
+  lat = -17.390785;
+  lng = -66.078385;
 }
