@@ -24,9 +24,8 @@ export class ItemService {
     return this.http.get(baseURL + 'iteminstances/' + id) as Observable<Item>;
   }
 
-  getFeaturedItem(): Observable<Item> {
-    return this.http.get(baseURL + 'iteminstances?featured=true').pipe(
-      map(items => (items as Item[]).find(item => item.featured === true))) as Observable<Item>;
+  getFeaturedItem(): Observable<Item[]> {
+    return this.http.get(baseURL + 'iteminstances?featured=true') as Observable<Item[]>;
   }
 
   getItemIds(): Observable<number[]> {

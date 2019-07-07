@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.itemService.getFeaturedItem()
-      .subscribe(item => this.item = item);
+      .subscribe(item => this.item = item[0]);
     this.employeeService.getFeaturedEmployee()
       .subscribe(employee => this.employee = employee);
   }
